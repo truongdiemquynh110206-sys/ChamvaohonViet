@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lịch sử gốm Bát Tràng | CHẠM VÀO HỒN VIỆT</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8f3eb;
+            color: #4d382b;
+            line-height: 1.7;
+        }
+
+        /* HEADER */
+        header {
+            background: #fffdf9;
+            border-bottom: 1px solid #e5d7c8;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 18px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #8b5e3c;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #5b4637;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #a66a3f;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 50px 20px;
+            position: relative;
+
+            background:
+                linear-gradient(rgba(70, 45, 30, 0.58), rgba(70, 45, 30, 0.58)),
+                url("https://xakhonglao.laichau.gov.vn/upload/2000157/20190726/grab6c6271.jpg")
+                center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 18px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* MAIN */
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 25px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 65px;
+        }
+
+        .section-label {
+            color: #a66a3f;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .intro h2 {
+            font-size: 34px;
+            margin-bottom: 18px;
+            color: #593d2d;
+        }
+
+        .intro p {
+            color: #705b4c;
+            font-size: 17px;
+        }
+
+        /* IMAGE */
+        .main-image {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+            margin-bottom: 65px;
+            box-shadow: 0 12px 35px rgba(70, 45, 30, 0.15);
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #d6b99e;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            width: 50%;
+            padding: 0 45px 65px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            margin-left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-left: 50%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 5px;
+            width: 17px;
+            height: 17px;
+            background: #a66a3f;
+            border: 4px solid #f8f3eb;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px #a66a3f;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-dot {
+            right: -9px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -9px;
+        }
+
+        .period {
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 20px;
+            background: #e9d8c5;
+            color: #795338;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .timeline-item h3 {
+            font-size: 25px;
+            color: #654532;
+            margin-bottom: 12px;
+        }
+
+        .timeline-item p {
+            color: #705b4c;
+            font-size: 16px;
+        }
+
+        /* FEATURE IMAGE */
+        .history-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 8px 22px rgba(70, 45, 30, 0.12);
+        }
+
+        /* MODERN SECTION */
+        .modern-section {
+            margin-top: 50px;
+            background: #fffdf9;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 8px 30px rgba(70, 45, 30, 0.08);
+        }
+
+        .modern-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .modern-grid img {
+            width: 100%;
+            height: 370px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .modern-content h2 {
+            color: #593d2d;
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .modern-content p {
+            color: #705b4c;
+            margin-bottom: 15px;
+        }
+
+        .modern-content ul {
+            padding-left: 22px;
+            color: #705b4c;
+        }
+
+        .modern-content li {
+            margin-bottom: 9px;
+        }
+
+        /* HIGHLIGHT */
+        .highlight {
+            margin-top: 70px;
+            padding: 55px 30px;
+            text-align: center;
+            background: #ead9c6;
+            border-radius: 20px;
+        }
+
+        .highlight h2 {
+            color: #583d2d;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .highlight p {
+            max-width: 780px;
+            margin: auto;
+            color: #674b38;
+            font-size: 17px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #4c382c;
+            color: #eadfd4;
+            text-align: center;
+            padding: 35px 20px;
+            margin-top: 30px;
+        }
+
+        footer strong {
+            color: #fff8ef;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .main-image {
+                height: 300px;
+            }
+
+            .timeline::before {
+                left: 10px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+                width: 100%;
+                margin-left: 0;
+                padding: 0 0 50px 40px;
+                text-align: left;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 1px;
+                right: auto;
+            }
+
+            .modern-section {
+                padding: 30px 22px;
+            }
+
+            .modern-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modern-grid img {
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .logo {
+                font-size: 18px;
+            }
+
+            nav {
+                font-size: 14px;
+            }
+
+            main {
+                padding: 50px 18px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .intro h2 {
+                font-size: 27px;
+            }
+
+            .timeline-item h3 {
+                font-size: 22px;
+            }
+
+            .highlight h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-inner">
+
+            <a href="index.html" class="logo">
+                CHẠM VÀO HỒN VIỆT
+            </a>
+
+            <nav>
+                <a href="index.html">Trang chủ</a>
+                <a href="battrang.html">Bát Tràng</a>
+                <a href="battrang_history.html">Lịch sử</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="section-label" style="color:#f3dfc9;">
+                Di sản làng nghề Việt Nam
+            </div>
+
+            <h1>
+                Lịch sử gốm Bát Tràng
+            </h1>
+
+            <p>
+                Hành trình hàng trăm năm từ một làng nghề ven sông Hồng
+                đến thương hiệu gốm nổi tiếng của Việt Nam.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <main>
+
+        <!-- INTRO -->
+        <section class="intro">
+
+            <div class="section-label">
+                Hành trình qua thời gian
+            </div>
+
+            <h2>
+                Từ đất và lửa đến di sản
+            </h2>
+
+            <p>
+                Bát Tràng là một trong những làng nghề gốm nổi tiếng lâu đời
+                của Việt Nam. Qua nhiều thế kỷ, nghề làm gốm nơi đây đã trải
+                qua những giai đoạn hình thành, phát triển, biến động và đổi mới,
+                nhưng vẫn giữ được những giá trị thủ công đặc trưng.
+            </p>
+
+        </section>
+
+
+        <img
+            class="main-image"
+            src="https://xakhonglao.laichau.gov.vn/upload/2000157/20190726/grabbbc872.jpg"
+            alt="Gốm Bát Tràng"
+        >
+
+
+        <!-- TIMELINE -->
+        <section>
+
+            <div class="intro">
+
+                <div class="section-label">
+                    Dòng thời gian
+                </div>
+
+                <h2>
+                    Những dấu mốc quan trọng
+                </h2>
+
+                <p>
+                    Lịch sử Bát Tràng gắn liền với sự phát triển của
+                    nghề gốm, hoạt động giao thương và sự thay đổi của
+                    xã hội Việt Nam.
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <!-- 14 - 15 -->
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <span class="period">
+                        Thế kỷ XIV – XV
+                    </span>
+
+                    <h3>
+                        Hình thành làng nghề
+                    </h3>
+
+                    <p>
+                        Các tư liệu lịch sử cho thấy nghề gốm Bát Tràng
+                        đã hình thành từ khoảng thế kỷ XIV – XV.
+                        Dư địa chí của Nguyễn Trãi cũng ghi nhận Bát Tràng
+                        là nơi sản xuất đồ chén bát.
+                    </p>
+
+                    <img
+                        class="history-image"
+                        src="https://xakhonglao.laichau.gov.vn/upload/2000157/20190726/grab6c6271.jpg"
+                        alt="Lịch sử hình thành làng gốm Bát Tràng"
+                    >
+
+                </article>
+
+
+                <!-- 15 - 17 -->
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <span class="period">
+                        Thế kỷ XV – XVII
+                    </span>
+
+                    <h3>
+                        Thời kỳ hưng thịnh
+                    </h3>
+
+                    <p>
+                        Hoạt động giao thương phát triển giúp sản phẩm
+                        Bát Tràng được lưu thông rộng rãi. Nhờ vị trí
+                        bên sông Hồng, làng nghề có điều kiện thuận lợi
+                        để đưa sản phẩm đến nhiều vùng trong nước và
+                        ra thị trường quốc tế.
+                    </p>
+
+                    <img
+                        class="history-image"
+                        src="https://xakhonglao.laichau.gov.vn/upload/2000157/20190726/grabbbc872.jpg"
+                        alt="Gốm Bát Tràng thời kỳ phát triển"
+                    >
+
+                </article>
+
+
+                <!-- 18 - 19 -->
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <span class="period">
+                        Thế kỷ XVIII – XIX
+                    </span>
+
+                    <h3>
+                        Giai đoạn suy giảm
+                    </h3>
+
+                    <p>
+                        Những thay đổi trong chính sách ngoại thương
+                        và tình hình giao thương quốc tế khiến hoạt động
+                        xuất khẩu gốm sứ giảm sút. Làng nghề phải thích ứng
+                        với những biến động kinh tế và thị trường.
+                    </p>
+
+                </article>
+
+
+                <!-- 20 -->
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <span class="period">
+                        Thế kỷ XX
+                    </span>
+
+                    <h3>
+                        Bước vào thời kỳ mới
+                    </h3>
+
+                    <p>
+                        Trong thế kỷ XX, hoạt động sản xuất tại Bát Tràng
+                        dần được tổ chức theo mô hình mới. Nhiều thế hệ
+                        thợ gốm được đào tạo và tiếp tục phát triển kỹ thuật,
+                        góp phần duy trì nghề truyền thống.
+                    </p>
+
+                    <img
+                        class="history-image"
+                        src="https://xakhonglao.laichau.gov.vn/upload/2000157/20190726/grabdc9563.jpg"
+                        alt="Làng gốm Bát Tràng thời hiện đại"
+                    >
+
+                </article>
+
+
+                <!-- TODAY -->
+                <article class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <span class="period">
+                        Hiện nay
+                    </span>
+
+                    <h3>
+                        Truyền thống kết hợp hiện đại
+                    </h3>
+
+                    <p>
+                        Bát Tràng ngày nay phát triển đa dạng với nhiều
+                        sản phẩm như bát đĩa, ấm chén, bình hoa, đồ trang trí
+                        và các sản phẩm theo đơn đặt hàng. Nghệ nhân vừa
+                        gìn giữ kỹ thuật truyền thống, vừa sáng tạo những
+                        thiết kế phù hợp với đời sống hiện đại.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- MODERN -->
+        <section class="modern-section">
+
+            <div class="modern-grid">
+
+                <img
+                    src="https://xakhonglao.laichau.gov.vn/upload/2000157/20190726/grabdc9563.jpg"
+                    alt="Gốm Bát Tràng ngày nay"
+                >
+
+                <div class="modern-content">
+
+                    <div class="section-label">
+                        Bát Tràng hôm nay
+                    </div>
+
+                    <h2>
+                        Giữ nghề bằng sáng tạo
+                    </h2>
+
+                    <p>
+                        Từ nền tảng nghề gốm truyền thống, Bát Tràng đã
+                        không ngừng thay đổi để thích ứng với nhu cầu mới.
+                    </p>
+
+                    <p>
+                        Những sản phẩm quen thuộc được phát triển với
+                        nhiều kiểu dáng, màu men và công năng khác nhau.
+                    </p>
+
+                    <ul>
+                        <li>Ấm chén và đồ dùng gia đình</li>
+                        <li>Bát, đĩa và đồ ăn uống</li>
+                        <li>Bình hoa và đồ trang trí</li>
+                        <li>Sản phẩm thủ công theo yêu cầu</li>
+                        <li>Các dòng gốm phục dựng theo phong cách cổ</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- HIGHLIGHT -->
+        <section class="highlight">
+
+            <div class="section-label">
+                Giá trị di sản
+            </div>
+
+            <h2>
+                Đất – Lửa – Bàn tay người thợ
+            </h2>
+
+            <p>
+                Qua hàng trăm năm, gốm Bát Tràng không chỉ là những vật dụng
+                trong đời sống mà còn là sự kết tinh của đất, lửa, kỹ thuật
+                và bàn tay người nghệ nhân. Mỗi sản phẩm mang theo câu chuyện
+                về một làng nghề đã bền bỉ gìn giữ nghề truyền thống qua nhiều
+                thế hệ.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            <strong>CHẠM VÀO HỒN VIỆT</strong>
+        </p>
+
+        <p>
+            Gốm nghìn năm, dáng hình hôm nay.
+        </p>
+
+        <p style="margin-top:10px; font-size:13px;">
+            Website mô phỏng phục vụ mục đích học tập.
+        </p>
+
+    </footer>
+
+</body>
+</html>
