@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Giới thiệu làng nghề gốm Bát Tràng | Chạm Vào Hồn Việt</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f1e8;
+            color: #4e3a2c;
+            line-height: 1.8;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        a {
+            color: #8b5e3c;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e4d7c8;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            width: min(1180px, 92%);
+            margin: auto;
+            min-height: 80px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            color: #5b4030;
+            line-height: 1.1;
+        }
+
+        .logo small {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: #a47755;
+        }
+
+        .logo strong {
+            font-family: Georgia, serif;
+            font-size: 22px;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            color: #5f4939;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #a26f48;
+            text-decoration: none;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 580px;
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(64, 45, 33, 0.48),
+                    rgba(64, 45, 33, 0.48)
+                ),
+                url("https://www.vietfuntravel.com.vn/image/data/Ha-Noi/lang-gom-bat-trang/gioi-thieu-ve-lang-gom-bat-trang-h1.jpg")
+                center / cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            width: min(850px, 90%);
+        }
+
+        .hero-label {
+            font-size: 12px;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            color: #f0ddc8;
+        }
+
+        .hero h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(42px, 7vw, 72px);
+            font-weight: normal;
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            color: #f8eee3;
+        }
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .container {
+            width: min(1080px, 92%);
+            margin: auto;
+        }
+
+        .content {
+            padding: 90px 0;
+        }
+
+        .section {
+            margin-bottom: 90px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            display: block;
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #a47755;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .section-title h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 42px;
+            font-weight: normal;
+            color: #513a2b;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 12px auto 0;
+            color: #806d5d;
+        }
+
+        .text {
+            font-size: 16px;
+            color: #655245;
+        }
+
+        .text p {
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           INTRO GRID
+        ========================= */
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .intro-image {
+            height: 450px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .intro-image img {
+            height: 100%;
+        }
+
+        .highlight {
+            background: #eadcca;
+            border-left: 4px solid #9a6b49;
+            padding: 20px 25px;
+            margin: 25px 0;
+            color: #624a38;
+        }
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .experience-card {
+            background: #fff;
+            border: 1px solid #e6d9ca;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(80, 55, 38, 0.1);
+        }
+
+        .experience-card img {
+            height: 280px;
+        }
+
+        .experience-info {
+            padding: 25px;
+        }
+
+        .experience-info h3 {
+            font-family: Georgia, serif;
+            font-size: 23px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            color: #5a4030;
+        }
+
+        .experience-info p {
+            color: #756255;
+            font-size: 14px;
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process {
+            background: #fff;
+            padding: 35px;
+            margin-top: 35px;
+            border: 1px solid #e6d9ca;
+        }
+
+        .process-title {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            margin-bottom: 25px;
+            color: #5a4030;
+        }
+
+        .process-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .process-item {
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .process-number {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #d8c1a8;
+            color: #563e2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+        }
+
+        .process-item h4 {
+            font-family: Georgia, serif;
+            margin-bottom: 8px;
+        }
+
+        .process-item p {
+            font-size: 13px;
+            color: #7d6b5c;
+        }
+
+        /* =========================
+           PLACES
+        ========================= */
+
+        .places {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .place-card {
+            background: #eee3d5;
+            padding: 30px;
+        }
+
+        .place-card h3 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            margin-bottom: 12px;
+            color: #5c4231;
+        }
+
+        .place-card p {
+            color: #725f50;
+        }
+
+        /* =========================
+           GIFT
+        ========================= */
+
+        .gift-section {
+            background: #e6d5c0;
+            padding: 70px 0;
+        }
+
+        .gift-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .gift-image {
+            height: 430px;
+            overflow: hidden;
+        }
+
+        .gift-image img {
+            height: 100%;
+        }
+
+        .gift-text h2 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+            font-weight: normal;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #513a2b;
+        }
+
+        .gift-text p {
+            margin-bottom: 18px;
+            color: #685344;
+        }
+
+        .gift-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .gift-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(90, 64, 48, 0.15);
+        }
+
+        .gift-list li::before {
+            content: "◆";
+            font-size: 8px;
+            margin-right: 10px;
+            color: #986947;
+        }
+
+        /* =========================
+           QUOTE
+        ========================= */
+
+        .quote {
+            margin: 50px 0;
+            text-align: center;
+            padding: 40px 30px;
+            background: #fff;
+            border: 1px solid #e5d8ca;
+        }
+
+        .quote p {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-style: italic;
+            color: #654936;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #4c382b;
+            color: #f3e8dc;
+            padding: 45px 0;
+            text-align: center;
+        }
+
+        footer h3 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #d8c7b7;
+            font-size: 13px;
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 22px;
+            border: 1px solid #cdb8a3;
+            color: #f3e8dc;
+        }
+
+        .back-home:hover {
+            background: #fff;
+            color: #5a4030;
+            text-decoration: none;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                min-height: 500px;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .intro-grid,
+            .gift-grid,
+            .places {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-list {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .section-title h2,
+            .gift-text h2 {
+                font-size: 34px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .header-container {
+                min-height: 70px;
+            }
+
+            .logo strong {
+                font-size: 17px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .intro-image,
+            .gift-image {
+                height: 300px;
+            }
+
+            .process-list {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                <small>CHẠM VÀO</small>
+                <strong>HỒN VIỆT</strong>
+            </a>
+
+            <nav>
+                <a href="index.html">Trang chủ</a>
+                <a href="#history">Lịch sử</a>
+                <a href="#experience">Trải nghiệm</a>
+                <a href="#gift">Quà lưu niệm</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                LÀNG NGHỀ TRUYỀN THỐNG · HÀ NỘI
+            </div>
+
+            <h1>
+                Bát Tràng – Nơi<br>
+                đất hóa thành hoa
+            </h1>
+
+            <p>
+                Hơn 500 năm gìn giữ nghề gốm truyền thống,
+                nơi bàn tay người thợ biến đất và lửa
+                thành những tác phẩm mang đậm hồn Việt.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <main>
+
+        <div class="content">
+
+
+            <!-- =========================
+                 1. GIỚI THIỆU
+            ========================== -->
+
+            <section class="section" id="history">
+
+                <div class="section-title">
+
+                    <span>01 · LÀNG NGHỀ</span>
+
+                    <h2>Giới thiệu về Bát Tràng</h2>
+
+                    <p>
+                        Một trong những làng nghề gốm nổi tiếng
+                        và lâu đời của Hà Nội.
+                    </p>
+
+                </div>
+
+
+                <div class="intro-grid">
+
+                    <div class="intro-image">
+
+                        <img
+                            src="https://www.vietfuntravel.com.vn/image/data/Ha-Noi/lang-gom-bat-trang/gioi-thieu-ve-lang-gom-bat-trang-h1.jpg"
+                            alt="Làng gốm Bát Tràng Hà Nội"
+                        >
+
+                    </div>
+
+
+                    <div class="text">
+
+                        <p>
+                            <strong>Làng gốm Bát Tràng</strong> nằm bên
+                            tả ngạn sông Hồng, nay thuộc xã Bát Tràng,
+                            huyện Gia Lâm, Hà Nội, cách trung tâm thành phố
+                            hơn 10 km về phía Đông Nam.
+                        </p>
+
+                        <p>
+                            Làng nghề được hình thành từ thời nhà Lý.
+                            Trải qua nhiều thế kỷ, Bát Tràng vẫn duy trì
+                            nghề làm gốm và trở thành một địa danh gắn liền
+                            với văn hóa thủ công truyền thống của Thủ đô.
+                        </p>
+
+                        <div class="highlight">
+                            <strong>Bát Tràng nổi tiếng với nhiều dòng sản phẩm</strong>
+                            như gốm gia dụng, đồ thờ tự, gốm mỹ thuật,
+                            gốm xây dựng và gốm trang trí.
+                        </div>
+
+                        <p>
+                            Sản phẩm Bát Tràng có nhiều kiểu dáng,
+                            màu men và công dụng khác nhau. Không chỉ
+                            được sử dụng rộng rãi trong nước, gốm Bát Tràng
+                            còn được biết đến tại nhiều thị trường quốc tế.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 2. TRẢI NGHIỆM
+            ========================== -->
+
+            <section class="section" id="experience">
+
+                <div class="section-title">
+
+                    <span>02 · TRẢI NGHIỆM</span>
+
+                    <h2>Khám phá làng gốm</h2>
+
+                    <p>
+                        Đến Bát Tràng không chỉ để ngắm gốm,
+                        mà còn để trải nghiệm cách một sản phẩm
+                        được tạo nên từ đất.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-grid">
+
+
+                    <article class="experience-card">
+
+                        <img
+                            src="https://www.vietfuntravel.com.vn/image/data/Ha-Noi/lang-gom-bat-trang/gioi-thieu-ve-lang-gom-bat-trang-h3.jpg"
+                            alt="Du khách tự tay làm gốm Bát Tràng"
+                        >
+
+                        <div class="experience-info">
+
+                            <h3>Tự tay làm gốm</h3>
+
+                            <p>
+                                Du khách có thể đến khu Chợ Gốm,
+                                trải nghiệm nhào đất và tạo hình trên
+                                bàn xoay để làm nên những chiếc cốc,
+                                đĩa, bình hoa hoặc những món đồ nhỏ
+                                theo trí tưởng tượng của mình.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="experience-card">
+
+                        <img
+                            src="https://www.vietfuntravel.com.vn/image/data/Ha-Noi/lang-gom-bat-trang/gioi-thieu-ve-lang-gom-bat-trang-h4.JPG"
+                            alt="Sản phẩm gốm Bát Tràng"
+                        >
+
+                        <div class="experience-info">
+
+                            <h3>Khám phá sản phẩm gốm</h3>
+
+                            <p>
+                                Những con ngõ, cửa hàng và xưởng gốm
+                                trưng bày nhiều loại bình, bát, ấm trà,
+                                chum vại và đồ trang trí với kiểu dáng
+                                và màu men đa dạng.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- Quy trình -->
+
+                <div class="process">
+
+                    <div class="process-title">
+                        Một trải nghiệm làm gốm thường gồm
+                    </div>
+
+                    <div class="process-list">
+
+                        <div class="process-item">
+
+                            <div class="process-number">1</div>
+
+                            <h4>Nhào đất</h4>
+
+                            <p>
+                                Chuẩn bị và tạo hình khối đất sét.
+                            </p>
+
+                        </div>
+
+
+                        <div class="process-item">
+
+                            <div class="process-number">2</div>
+
+                            <h4>Tạo hình</h4>
+
+                            <p>
+                                Dùng bàn xoay để tạo dáng sản phẩm.
+                            </p>
+
+                        </div>
+
+
+                        <div class="process-item">
+
+                            <div class="process-number">3</div>
+
+                            <h4>Trang trí</h4>
+
+                            <p>
+                                Làm họa tiết và hoàn thiện bề mặt.
+                            </p>
+
+                        </div>
+
+
+                        <div class="process-item">
+
+                            <div class="process-number">4</div>
+
+                            <h4>Nung gốm</h4>
+
+                            <p>
+                                Sản phẩm được nung để hoàn thiện.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quote">
+
+                    <p>
+                        “Từ một nắm đất sét, qua bàn tay người thợ,
+                        một sản phẩm mang hồn Việt được hình thành.”
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 ĐỊA ĐIỂM
+            ========================== -->
+
+            <section class="section">
+
+                <div class="section-title">
+
+                    <span>03 · KHÁM PHÁ</span>
+
+                    <h2>Những điểm đến đáng chú ý</h2>
+
+                </div>
+
+
+                <div class="places">
+
+                    <div class="place-card">
+
+                        <h3>Nhà Vạn Vân</h3>
+
+                        <p>
+                            Không gian trưng bày nhiều đồ gốm cổ,
+                            giúp du khách tìm hiểu thêm về lịch sử
+                            và sự phát triển của nghề gốm Bát Tràng.
+                        </p>
+
+                    </div>
+
+
+                    <div class="place-card">
+
+                        <h3>Đình Làng Gốm</h3>
+
+                        <p>
+                            Nằm gần sông Hồng, đây là địa điểm gắn với
+                            những giá trị văn hóa và truyền thống
+                            của cộng đồng làng nghề.
+                        </p>
+
+                    </div>
+
+
+                    <div class="place-card">
+
+                        <h3>Chợ Gốm Bát Tràng</h3>
+
+                        <p>
+                            Nơi tập trung nhiều cửa hàng với các sản phẩm
+                            từ bình hoa, chén bát, ấm trà đến đồ trang trí
+                            và các món quà lưu niệm.
+                        </p>
+
+                    </div>
+
+
+                    <div class="place-card">
+
+                        <h3>Ẩm thực làng nghề</h3>
+
+                        <p>
+                            Ngoài gốm, du khách còn có thể thưởng thức
+                            các món ăn dân dã và đặc sản mang hương vị
+                            truyền thống của địa phương.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- =========================
+             QUÀ LƯU NIỆM
+        ========================== -->
+
+        <section class="gift-section" id="gift">
+
+            <div class="container">
+
+                <div class="gift-grid">
+
+                    <div class="gift-image">
+
+                        <img
+                            src="https://www.vietfuntravel.com.vn/image/data/Ha-Noi/lang-gom-bat-trang/gioi-thieu-ve-lang-gom-bat-trang-h5.jpg"
+                            alt="Gốm sứ Bát Tràng làm quà lưu niệm"
+                        >
+
+                    </div>
+
+
+                    <div class="gift-text">
+
+                        <div class="section-title" style="text-align:left; margin-bottom:25px;">
+
+                            <span>04 · QUÀ LƯU NIỆM</span>
+
+                            <h2>
+                                Một món quà<br>
+                                mang hồn Bát Tràng
+                            </h2>
+
+                        </div>
+
+
+                        <p>
+                            Gốm Bát Tràng không chỉ là sản phẩm sử dụng
+                            trong gia đình mà còn là món quà lưu niệm
+                            mang giá trị văn hóa.
+                        </p>
+
+                        <p>
+                            Tại Chợ Gốm, du khách có thể tìm thấy nhiều
+                            sản phẩm như bình hoa, chén bát, ấm trà,
+                            chum vại, tranh gốm, chuông gió và các sản phẩm
+                            trang trí.
+                        </p>
+
+                        <ul class="gift-list">
+
+                            <li>Bình hoa và đồ trang trí</li>
+
+                            <li>Chén, bát và đồ gia dụng</li>
+
+                            <li>Ấm trà và bộ đồ uống</li>
+
+                            <li>Tượng gốm và sản phẩm nghệ thuật</li>
+
+                            <li>Quà lưu niệm thủ công</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             KẾT
+        ========================== -->
+
+        <section class="content">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <span>CHẠM VÀO HỒN VIỆT</span>
+
+                    <h2>Biến đất thành hoa</h2>
+
+                    <p>
+                        Bát Tràng là nơi lịch sử, văn hóa và nghề thủ công
+                        cùng tồn tại qua nhiều thế hệ. Mỗi sản phẩm gốm
+                        không chỉ mang giá trị sử dụng mà còn lưu giữ
+                        câu chuyện về người thợ và làng nghề.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <h3>CHẠM VÀO HỒN VIỆT</h3>
+
+        <p>
+            Gốm Bát Tràng · Hà Nội
+        </p>
+
+        <a href="index.html" class="back-home">
+            ← Quay về trang chủ
+        </a>
+
+    </footer>
+
+</body>
+</html>
